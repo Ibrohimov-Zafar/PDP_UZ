@@ -1,42 +1,319 @@
-*{
-    padding: 0%;
-    margin: 0%;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
 }
 
 body{
-    background-image: url(./img/2021.25bbf1f3e8d85f6e3d13.jpg);
-    background-size: cover;  
-  /* background-position: center;   */
-  background-repeat: no-repeat;
+    background-image: url(https://pdp.uz/static/media/temp_header_bg.0abc43dc5fb6197a7c1f.png);
+    background-repeat: no-repeat;
+     background-size: cover ;
+     background-position: center;
 }
-
-nav{
+.navbar {
     display: flex;
-    justify-content: start;
-    gap: 110px;
-    background-color: rgba(66, 66, 66, 0.523);
-    padding: 25px;
-    padding-left: 70px;
-
-}
-a{
-    color: white;
-    padding-top: 10px;
-    font-size: 15px;
-
-}
-.logo{
-    width: 370px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  
 }
 
-.number{
-    background-color: rgb(6, 220, 6);
-     text-align: center;
-     border-radius: 20px;
-     width: 170px;
-     height: 35px;
+/* Scroll bo'lganda qo'shiladigan class */
+.navbar.scrolled {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Navigation qismi tugadi */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Scroll bo'lganda logo rangini o'zgartirish */
+.navbar.scrolled .logo {
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* Scroll bo'lganda link ranglarini o'zgartirish */
+.navbar.scrolled .nav-links a {
+    color: #333;
+}
+
+.phone-number {
+    background-color: #00cc00;
+    color: white !important;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.phone-number:hover {
+    background-color: #00b300;
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+        color: #f30909;
+    }
+
+    .navbar.scrolled .menu-btn {
+        color: #333;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        color: #333;
+    }
+
+    .phone-number {
+        margin-top: 1rem;
+    }
+}
+
+.homePage{
+    margin-top: 470px;
+}
+.home{
+    width: 1536px;
+}
+
+
+
+/* Nima uchun PDP page */
+.why-pdp {
+    padding: 5rem 5%;
+    background: white;
+    
+}
+
+.why-pdp h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.why-pdp-description {
+    max-width: 800px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 4rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    position: relative;
+}
+
+.feature-card {
+    background: #f8f8f8;
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: #e6ffe6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.feature-icon svg {
+    width: 30px;
+    height: 30px;
+    color: #00cc00;
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.feature-description {
+    color: #666;
+    line-height: 1.5;
+}
+
+.yellow-shape {
+    position: absolute;
+    background: #FFD700;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.shape-1 {
+    left: -100px;
+    bottom: -50px;
+}
+
+.shape-2 {
+    right: 30%;
+    top: 20%;
+}
+
+@media (max-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .why-pdp {
+        padding: 3rem 5%;
+    }
+
+    .why-pdp h2 {
+        font-size: 2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .yellow-shape {
+        display: none;
+    }
+}
+
+
+
+/* Founder */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+.founder-image {
+    position: relative;
+    flex: 1;
+}
+
+.green-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #00ff00;
+    border-radius: 50%;
+    top: -20px;
+    left: -20px;
+    z-index: 1;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.founder-title {
+    color: #ffd700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.quote {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.academy-info {
+    margin-bottom: 2rem;
+}
+
+.founder-name {
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+.brands {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.brand-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.8rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .founder-image {
+        margin: 0 auto;
+    }
+
+    .content {
+        padding: 1rem 0;
+    }
+}
