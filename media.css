@@ -1,28 +1,4 @@
-@media (max-width: 768px) {
-    .menu-btn {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        width: 100%;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        background-color: white;
-        flex-direction: column;
-        padding: 1rem;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .phone-number {
-        margin-top: 1rem;
-    }
-}
+ 
 
 @media (max-width: 768px) {
     .menu-btn {
@@ -57,10 +33,29 @@
     .phone-number {
         margin-top: 1rem;
     }
-}
+    .menu-btn {
+        display: block;
+    }
 
+    .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
 
-@media (max-width: 768px) {
+    .nav-links.active {
+        display: flex;
+    }
+
+    .phone-number {
+        margin-top: 1rem;
+    }
     .container {
         flex-direction: column;
         text-align: center;
@@ -73,9 +68,6 @@
     .content {
         padding: 1rem 0;
     }
-}
-
-@media (max-width: 768px) {
     .wrapper {
         padding: 1rem;
     }
@@ -88,7 +80,17 @@
         width: 40px;
         height: 40px;
     }
+    .quote {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
 }
+
+
+ 
+
+ 
 
 @media (max-width: 640px) {
     .contact__form {
@@ -115,9 +117,5 @@
         font-size: 1.5rem;
     }
 }
-@media (max-width: 768px) {
-    .quote {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-}
+ 
+    
