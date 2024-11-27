@@ -76,46 +76,21 @@ body{
     background-color: #00b300;
 }
 
-@media (max-width: 768px) {
-    .menu-btn {
-        display: block;
-        color: #f30909;
-    }
-
-    .navbar.scrolled .menu-btn {
-        color: #333;
-    }
-
-    .nav-links {
-        display: none;
-        width: 100%;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        background-color: white;
-        flex-direction: column;
-        padding: 1rem;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        color: #333;
-    }
-
-    .phone-number {
-        margin-top: 1rem;
-    }
-}
 
 .homePage{
-    margin-top: 470px;
+     background-image: url(https://pdp.uz/static/media/temp_header_bg.0abc43dc5fb6197a7c1f.png);
+    height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .home{
     width: 1536px;
+}
+.orta{
+    position: relative;
+    top: 450px;
+    width: 1512px;
 }
 
 
@@ -202,40 +177,17 @@ body{
     top: 20%;
 }
 
-@media (max-width: 1024px) {
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .why-pdp {
-        padding: 3rem 5%;
-    }
-
-    .why-pdp h2 {
-        font-size: 2rem;
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .yellow-shape {
-        display: none;
-    }
-}
 
 
 
 /* Founder */
 .container {
-    max-width: 1200px;
+    /* max-width: 1700px; */
     margin: 0 auto;
     display: flex;
     gap: 2rem;
     align-items: center;
+    background-color: #012c5e;
   }
 
 .founder-image {
@@ -252,14 +204,16 @@ body{
     top: -20px;
     left: -20px;
     z-index: 1;
+    left:40px ;
 }
 
 .main-image {
-    width: 100%;
-    max-width: 500px;
+    /* width: 100%; */
+    max-width: 400px;
     border-radius: 10px;
     position: relative;
     z-index: 2;
+    left: 110px;
 }
 
 .content {
@@ -277,6 +231,7 @@ body{
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 2rem;
+    color: white;
 }
 
 .academy-info {
@@ -303,17 +258,381 @@ body{
     font-size: 0.9rem;
 }
 
+
+/* PDP Tarixi */
+.wrapper {
+    /* max-width: 1700px; */
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    position: relative;
+    gap: 70px;
+ }
+
+.title__block {
+    display: flex;
+    flex-direction: column;
+     gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.title__main {
+    color: #00c853;
+    font-size: 20px;
+}
+
+.title__sub {
+    color: #00c853;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.content__block {
+    display: flex;
+    flex-direction: column;
+ }
+
+.description__text {
+     max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #0e0e0e;
+    position: relative;
+    right: 125px;
+}
+
+.timeline__wrapper {
+    display: flex;
+    justify-content: center;
+     position: relative;
+    padding: 2rem 0;
+}
+
+.timeline__line {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: #ffd700;
+}
+
+.timeline__years {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    z-index: 1;
+ }
+
+.year__item {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    border-radius: 50%;
+    background: #ffd700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.year__item--active {
+    background: #00c853;
+    transform: scale(1.1);
+}
+
+.image__block {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image__block img {
+    /* width: 100%; */
+    height: auto;
+    display: block;
+}
+
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
+    .wrapper {
+        padding: 1rem;
+    }
+    
+    .timeline__years {
+        gap: 2rem;
     }
 
-    .founder-image {
-        margin: 0 auto;
+    .year__item {
+        width: 40px;
+        height: 40px;
+    }
+}
+/* Contact */
+.contact {
+    min-height: 150px;
+    background: #1E293B;
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.contact__title {
+    color: #FFD700;
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact__subtitle {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 3rem;
+    opacity: 0.8;
+}
+
+.contact__form {
+    /* width: 100%; */
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form__label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.form__input {
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+}
+
+.form__input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form__button {
+    display: flex;
+    justify-self: center;
+    position: relative;
+    left: 130px;
+    background: #00C853;
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.form__button:hover {
+    background: #00A347;
+}
+
+@media (max-width: 640px) {
+    .contact__form {
+        grid-template-columns: 1fr;
     }
 
-    .content {
-        padding: 1rem 0;
+    .form__button {
+        grid-column: 1;
+        justify-self: center;
+        width: 100%;
+    }
+}
+
+
+/* Card */
+.card {
+    max-width: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: white;
+    margin: 40px 0;
+}
+
+.card__image {
+    /* width: 100%; */
+    height: 250px;
+    object-fit: cover;
+}
+
+.card__content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.logo {
+    height: 40px;
+}
+
+.card__title {
+    font-size: 2rem;
+    color: #1E293B;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card__description {
+    color: #64748B;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.card__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #00C853;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    width: fit-content;
+    transition: 0.3s ease;
+}
+
+.card__button:hover {
+    background: #00A347;
+}
+
+.card__button::after {
+    content: "→";
+    transition: 0.3s ease;
+}
+
+.card__button:hover::after {
+    transform: translateX(5px);
+}
+
+@media (max-width: 480px) {
+    .card {
+        margin: 1rem;
+    }
+
+    .card__content {
+        padding: 1.5rem;
+    }
+
+    .card__title {
+        font-size: 1.5rem;
+    }
+}
+
+.bigCard{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+}
+.veryBigCard{
+    background-color: white;
+}
+
+
+
+/* Prizident Qarori */
+.quote {
+    background-color: rgb(238, 236, 236);
+    max-width: 1700px;
+    /* margin: 2rem auto; */
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.quote__image-container {
+    position: relative;
+}
+
+.quote__circle {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    background: #FFD700;
+        z-index: -1;
+}
+
+.quote__image {
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.quote__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.quote__label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.quote__title {
+    color: #00C853;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.quote__text {
+    color: #333;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.quote__author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.author__image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.author__details {
+    display: flex;
+    flex-direction: column;
+}
+
+.author__label {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.author__name {
+    color: #1E293B;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .quote {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
