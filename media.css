@@ -23,3 +23,54 @@
         margin-top: 1rem;
     }
 }
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+        color: #f30909;
+    }
+
+    .navbar.scrolled .menu-btn {
+        color: #333;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        color: #333;
+    }
+
+    .phone-number {
+        margin-top: 1rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .founder-image {
+        margin: 0 auto;
+    }
+
+    .content {
+        padding: 1rem 0;
+    }
+}
