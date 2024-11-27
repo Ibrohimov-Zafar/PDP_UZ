@@ -357,20 +357,7 @@ body{
     display: block;
 }
 
-@media (max-width: 768px) {
-    .wrapper {
-        padding: 1rem;
-    }
-    
-    .timeline__years {
-        gap: 2rem;
-    }
 
-    .year__item {
-        width: 40px;
-        height: 40px;
-    }
-}
 /* Contact */
 .contact {
     min-height: 150px;
@@ -446,17 +433,6 @@ body{
     background: #00A347;
 }
 
-@media (max-width: 640px) {
-    .contact__form {
-        grid-template-columns: 1fr;
-    }
-
-    .form__button {
-        grid-column: 1;
-        justify-self: center;
-        width: 100%;
-    }
-}
 
 
 /* Card */
@@ -527,19 +503,7 @@ body{
     transform: translateX(5px);
 }
 
-@media (max-width: 480px) {
-    .card {
-        margin: 1rem;
-    }
 
-    .card__content {
-        padding: 1.5rem;
-    }
-
-    .card__title {
-        font-size: 1.5rem;
-    }
-}
 
 .bigCard{
     display: flex;
@@ -634,9 +598,3 @@ body{
     font-weight: 500;
 }
 
-@media (max-width: 768px) {
-    .quote {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-}
