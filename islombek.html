@@ -164,7 +164,8 @@
                         <ul>
                             <li>
                                 <span>Xurshidbek Kurbanov</span>
-                                <a href="https://online.pdp.uz/course/android-app-development"><i class="icon">🔗</i></a>
+                                <a href="https://online.pdp.uz/course/android-app-development"><i
+                                        class="icon">🔗</i></a>
                             </li>
                         </ul>
                     </div>
@@ -189,7 +190,7 @@
                 <!--  -->
                 <div class="cardlar">
                     <h2>Java Backend</h2>
-                    <p>Modullar soni: <strong>7</strong></p>
+                    <p>Modullar soni: <strong>10</strong></p>
                     <p>Intensiv: <strong>Amaliy mashg‘ulotlar</strong></p>
                     <div class="instructors">
                         <h3>Kurs kim tomonidan o‘tiladi:</h3>
@@ -206,48 +207,62 @@
     </div>
     <div class="page-3">
         <section class="pdp-online">
-            <div class="content">
-              <div class="info">
-                <h1>PDP Onlayn — bu...</h1>
-                <p>
-                  Darslar hech qanday messenjer yoki ijtimoiy tarmoqlarga emas, faqat
-                  pdp.uz platformasiga joylanadi.
-                </p>
-                <ul>
-                  <li>Vaqtingizni tejang</li>
-                  <li>Istalgan yerda o‘rganing</li>
-                  <li>Malakali mutaxassislar</li>
-                  <li>Qulay platforma</li>
-                </ul>
-                <div class="stats">
-                  <div>
-                    <h2>+5000</h2>
-                    <p>O‘quvchilar soni</p>
-                  </div>
-                  <div>
-                    <h2>+20</h2>
-                    <p>Kurslar soni</p>
-                  </div>
-                  <div>
-                    <h2>120 ta dars</h2>
-                    <p>Video darslar soni</p>
-                  </div>
+            <div class="content1">
+                <div class="info">
+                    <h1>PDP Onlayn — bu...</h1>
+                    <p>
+                        Darslar hech qanday messenjer yoki ijtimoiy tarmoqlarga emas, faqat
+                        pdp.uz platformasiga joylanadi.
+                    </p>
+                    <ul>
+                        <li>Vaqtingizni tejang</li>
+                        <li>Istalgan yerda o‘rganing</li>
+                        <li>Malakali mutaxassislar</li>
+                        <li>Qulay platforma</li>
+                    </ul>
+                    <div class="stats">
+                        <div>
+                            <h2>+5000</h2>
+                            <p>O‘quvchilar soni</p>
+                        </div>
+                        <div>
+                            <h2>+20</h2>
+                            <p>Kurslar soni</p>
+                        </div>
+                        <div>
+                            <h2>120 ta dars</h2>
+                            <p>Video darslar soni</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="form">
-                <h2>Kurslarimizga ro‘yxatdan o‘ting!</h2>
-                <form id="registration-form">
-                  <input type="text" id="name" placeholder="Ismingiz" required />
-                  <input type="tel" id="phone" placeholder="Telefon raqamingiz" required />
-                  <button type="submit">Yuborish</button>
-                </form>
-                <p>
-                  📞 Bog‘lanish uchun: <strong>(78) 777-47-47</strong>
-                </p>
-              </div>
+                <div class="form">
+                    <h2>Kurslarimizga ro‘yxatdan o‘ting!</h2>
+                    <form id="registration-form">
+                        <input type="text" id="name" placeholder="Ismingiz" required />
+                        <input type="tel" id="phone" placeholder="Telefon raqamingiz" required />
+                        <button type="submit">Yuborish</button>
+                    </form>
+                    <p>
+                        📞 Bog‘lanish uchun: <strong>(78) 777-47-47</strong>
+                    </p>
+                </div>
             </div>
-          </section>
-          
+        </section>
+        <script>
+            document.getElementById("registration-form").addEventListener("submit", function (e) {
+                e.preventDefault(); // Formani yuborishni to'xtatadi
+                const name = document.getElementById("name").value;
+                const phone = document.getElementById("phone").value;
+
+                if (name && phone) {
+                    alert("Saqlandi! Ism: " + name + ", Telefon: " + phone);
+                    document.getElementById("registration-form").reset();
+                } else {
+                    alert("Iltimos, barcha maydonlarni to'ldiring!");
+                }
+            });
+
+        </script>
     </div>
 </body>
 

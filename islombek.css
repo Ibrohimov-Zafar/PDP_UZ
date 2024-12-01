@@ -302,7 +302,7 @@ body {
     margin: 20px;
 }
 
-.content {
+.content1 {
     display: flex;
     gap: 20px;
 }
@@ -329,16 +329,16 @@ body {
     display: flex;
     gap: 20px;
     margin-top: 20px;
-}
+} 
 
 .stats div {
     text-align: center;
-}
+} 
 
 .stats h2 {
     color: #00ff40;
     margin: 0;
-}
+} 
 
 .form {
     background-color: #f9f9f9;
