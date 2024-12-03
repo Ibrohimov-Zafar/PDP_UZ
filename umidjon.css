@@ -1235,3 +1235,7 @@ body {
       padding: 10px 18px;
   }
 }
+.header__title{
+  color: #00c400;
+  text-align: left;
+}
